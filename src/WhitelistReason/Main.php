@@ -23,13 +23,9 @@
 
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
 
-      if(!(file_exists($this->getDataPath()))) {
+      @mkdir($this->getDataPath());
 
-        @mkdir($this->getDataPath());
-
-        $this->cfg = new Config($this->getDataPath() . "config.yml", Config::YAML, array("Whitelist" => "false", "Reason" => "Whitelsit Reason Here", "Players" => array("List players here")));
-
-      }
+      $this->cfg = new Config($this->getDataPath() . "config.yml", Config::YAML, array("Whitelist" => "false", "Reason" => "Whitelsit Reason Here", "Players" => array("List players here")));
 
     }
 
