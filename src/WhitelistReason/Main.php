@@ -27,7 +27,7 @@
 
         @mkdir($this->getDataPath());
 
-        $this->cfg = new Config($this->getDataPath() . "config.yml", Config::YAML, array("Whitelist" => "false", "Reason", "Players" => array("List players here")));
+        $this->cfg = new Config($this->getDataPath() . "config.yml", Config::YAML, array("Whitelist" => "false", "Reason" => "Whitelsit Reason Here", "Players" => array("List players here")));
 
       }
 
@@ -49,7 +49,7 @@
 
         foreach($whitelisted_players as $player) {
 
-          if(!($player === $player_name)) {
+          if(!($player_name === $player)) {
 
             $player->kick($reason);
 
