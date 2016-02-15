@@ -1,0 +1,25 @@
+name: WhitelistReason
+version: 2.0.0
+author: applqpak
+api: [1.0.0]
+main: WhitelistReason\Main
+commands:
+  reason:
+    usage: "/reason < reason >"
+    description: Change The Whitelist Reason.
+    permission: whitelistreason.comamnd.reason
+  wr:
+    usage: "/wr < true | false >"
+    description: Enable/Disable WhitelistReason.
+    permission: whitelistreason.command.wr
+  add:
+    usage: "/add <player>"
+    description: Add A Player To WhitelistReason.
+    permission: whitelistreason.command.add
+permissions:
+  whitelistreason.command.reason:
+    default: op
+  whitelistreason.comamnd.wr:
+    default: op
+  whitelistreason.command.add:
+    default: op
