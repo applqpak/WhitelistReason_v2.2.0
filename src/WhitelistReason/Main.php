@@ -25,7 +25,7 @@
 
       @mkdir($this->getDataPath());
 
-      $this->cfg = new Config($this->getDataPath() . "config.yml", Config::YAML, array("Whitelist" => "false", "Reason" => "Whitelsit Reason Here", "Players" => array("List players here")));
+      $this->cfg = new Config($this->getDataPath() . "config.yml", Config::YAML, array("Whitelist" => "false", "Reason" => "Whitelist Reason Here", "Players" => array("List players here")));
 
     }
 
