@@ -103,7 +103,7 @@
 
           } else {
 
-            $this->cfg->set("Reason", $args[0]);
+            $this->cfg->set("Whitelist", $args[0]);
 
             $this->cfg->save();
 
