@@ -43,13 +43,9 @@
 
       if($whitelist === "true") {
 
-        foreach($whitelisted_players as $p) {
+        if(!(in_array($player_name, $whitelisted_players))) {
 
-          if(!($player_name === $p)) {
-
-            $player->kick($reason);
-
-          }
+          $player->kick($reason);
 
         }
 
