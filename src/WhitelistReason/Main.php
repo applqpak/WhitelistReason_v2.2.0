@@ -29,7 +29,7 @@
 
     }
 
-    public function onJoin(PlayerPreLoginEvent $event) {
+    public function onPreLogin(PlayerPreLoginEvent $event) {
 
       $player = $event->getPlayer();
 
