@@ -4,7 +4,7 @@
 
   use pocketmine\plugin\PluginBase;
   use pocketmine\event\Listener;
-  use pocketmine\event\player\PlayerJoinEvent;
+  use pocketmine\event\player\PlayerPreLoginEvent;
   use pocketmine\utils\TextFormat as TF;
   use pocketmine\command\Command;
   use pocketmine\command\CommandSender;
@@ -29,7 +29,7 @@
 
     }
 
-    public function onJoin(PlayerJoinEvent $event) {
+    public function onJoin(PlayerPreLoginEvent $event) {
 
       $player = $event->getPlayer();
 
@@ -45,7 +45,7 @@
 
         if(!(in_array($player_name, $whitelisted_players))) {
 
-          $player->kick($reason);
+          $player->kick($reason, false);
 
         }
 
